@@ -14,3 +14,7 @@ def metrics(eval_pred):
 
 
 # TODO: create clause splitter that takes EULA files and returns a list of clauses.
+def getClauses(eula_str):
+  clauses = eula_str.split('\n')
+  nonempty_clauses = list(filter(lambda x : x != '', clauses))
+  return nonempty_clauses
